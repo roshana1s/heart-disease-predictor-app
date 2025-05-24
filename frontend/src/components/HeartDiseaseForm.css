@@ -1,0 +1,210 @@
+/* General background for both pages */
+.page-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+  padding: 2rem 0;
+}
+
+/* Form Container */
+.form-container, .results-container {
+  max-width: 540px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-desc {
+  color: #64748b;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.assessment-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.4rem;
+  cursor: help;
+}
+
+.form-input,
+.form-select {
+  padding: 0.7rem 1rem;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f8fafc;
+  transition: border 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  outline: none;
+  background: #fff;
+}
+
+.select-wrapper {
+  position: relative;
+}
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 1rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+.form-select::-ms-expand { display: none; }
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.submit-button,
+.new-assessment-button {
+  background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.85rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.submit-button:hover,
+.new-assessment-button:hover {
+  background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.submit-button:disabled {
+  background: #cbd5e1;
+  color: #64748b;
+  cursor: not-allowed;
+}
+
+/* Tooltip style for labels (native browser tooltip via title attribute) */
+.form-label {
+  cursor: help;
+}
+
+/* Results page enhancements */
+.result-card {
+  margin: 2rem 0 1.5rem 0;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+  border: 2px solid #e0e7ff;
+  background: #f8fafc;
+  position: relative;
+}
+
+.result-card.risk-detected {
+  border-color: #dc2626;
+  background: #fef2f2;
+}
+
+.result-card.no-risk {
+  border-color: #059669;
+  background: #ecfdf5;
+}
+
+.result-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.probability-text {
+  font-size: 1.1rem;
+  color: #334155;
+}
+
+.results-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.results-content {
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.input-summary-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0.4rem 0;
+}
+
+.input-summary-label {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.input-summary-value {
+  color: #334155;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .form-container, .results-container {
+    padding: 1rem 0.5rem;
+  }
+  .results-content {
+    padding: 0.7rem 0.5rem;
+  }
+}
