@@ -73,7 +73,7 @@ To explore data, tweak features, or train new models:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/heart-disease-predictor-app.git
+   git clone https://github.com/roshana1s/heart-disease-predictor-app.git
    cd heart-disease-predictor-app
    ```
 2. **Create & activate Conda environment**  
